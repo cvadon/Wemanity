@@ -1,7 +1,7 @@
 # Wemanity
 
 
-How to use it ? \n
+How to use it ?
 In the file called : CKD_final
 Change the line of the data_test to give it another dataset to predict.
 In the end, it will run and return a CSV file containing your dataset with the columns of CKD predicted
