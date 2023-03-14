@@ -123,3 +123,21 @@ In the end, it will run and return a CSV file containing your dataset with the c
     		ckd          	  250
     		notckd       	  150   
 	
+#Answer of Corentin Vadon 
+
+How to use the algorithms : 
+
+1. wemanity-exercice.ipynb is an algorithm used to test the different columns and the paramters for the model. It can be run as a notebook but will note return results
+
+2. CKD.py, this is a script python that can be run with : python3 CKD.py 
+	This will run a prediction on a file called : dataset_test.csv and will use dataset_full.csv for the training 
+	It will return for each patient a sentence : 'The patient X has more/less chances to get CKD' 
+	Moreover, it creates a file called out.csv that containt the dataset_test.csv and the result as a columns 'Class'
+
+3. CKD_API.py, this is a fastAPI that can be runned with : uvicorn CKD_API:app --reload
+	It needs the file CKD_class.py to know the data for the first prediction that will be explained
+	It contains 2 different parts that you can try in 'http://127.0.0.1:8000/docs'
+	The first one is for only one patient, you can enter allt he information about it and it will return the prediction 
+	The second one is like for the script of CKD.py but will run on the API (so you can change the name of the file without going into the code) 
+	
+
